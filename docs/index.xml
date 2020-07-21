@@ -48,21 +48,30 @@
     </item>
     
     <item>
-      <title>Entrega 01: Planimetrías</title>
-      <link>https://jvarleta.github.io/docs/entrega-01/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://jvarleta.github.io/docs/entrega-01/</guid>
-      <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
-    </item>
-    
-    <item>
       <title>Objetivos del Curso</title>
       <link>https://jvarleta.github.io/docs/objetivos/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://jvarleta.github.io/docs/objetivos/</guid>
       <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
+    </item>
+    
+    <item>
+      <title>Entrega 01: Planimetrías</title>
+      <link>https://jvarleta.github.io/docs/entrega-01/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://jvarleta.github.io/docs/entrega-01/</guid>
+      <description>Planimetrías de la Silla Eames Plywood.</description>
+    </item>
+    
+    <item>
+      <title>Entrega 02: Mecanizado CNC</title>
+      <link>https://jvarleta.github.io/docs/entrega-02/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://jvarleta.github.io/docs/entrega-02/</guid>
+      <description>Mecanizado CNC de la Silla Fresia.</description>
     </item>
     
   </channel>
