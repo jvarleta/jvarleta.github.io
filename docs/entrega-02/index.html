@@ -111,7 +111,7 @@
     </li>
     
     <li class="">
-      <a href="https://jvarleta.github.io/docs/entrega-01/">Entrega 01: Planimetrías</a>
+      <a href="https://jvarleta.github.io/docs/entrega-01/">Entrega 01: Planimetría</a>
     </li>
     
     <li class="active ">
@@ -127,15 +127,99 @@
           
 <h1 class="title">Entrega 02: Mecanizado CNC</h1>
 <div class="content ">
-  <p>Se ha recurrido a la construcción de nuevas herramientas y máquinas de mecanizado y de allí surge el mecanizado CNC, que es simplemente el nacimiento de un híbrido entre el componente electromecánico de las máquinas-herramientas, y el mando de un sistema operativo informático que dirige cada función. En este encargo vamos a revisar el mecanizado CNC en fusion 360 de la Silla Fresia.</p>
+  <p>En el último tiempo, se ha recurrido a la construcción de nuevas herramientas y máquinas de mecanizado y de allí surge el mecanizado CNC, que es simplemente el nacimiento de un híbrido entre el componente electromecánico de las máquinas-herramientas, y el mando de un sistema operativo informático que dirige cada función. En este encargo vamos a revisar el mecanizado CNC en fusion 360 de la Silla Fresia.</p>
 <hr>
-<h3 id="historia">Historia</h3>
+<h2 id="mecanizado-cnc">Mecanizado CNC</h2>
 <p><img src="/img/mecanizado/1.jpg" alt="Historia"></p>
-<p>Un centro de mecanizado es una máquina muy automatizada capaz de realizar múltiples operaciones de maquinado en una instalación bajo CNC (control numérico por computadora) con la mínima intervención humana. Las operaciones típicas son aquellas que usan herramientas de corte rotatorio como cortadores y brocas. Este sistema de mecanizado destaca por su velocidad de producción como ventaja y los altos costos como desventaja. En la actualidad se construyen muchas máquinas en forma modular, de tal modo que se pueden instalar y modificar diversos equipos y accesorios periféricos, según se necesite en los cambios de productos a manufacturar.</p>
-<p>En este caso, aplicamos la técnica de mecanizado en madera. Varía mucho el mecanismo de la madera según su proveedor, tipo de madera, humedad, etc. Para distintos materiales se cambian las revoluciones y velocidad del cabezal de la máquina.</p>
-<h3 id="proceso-mecanizado-cnc">Proceso Mecanizado CNC</h3>
-<p>Generare las distintas trayectorias para que la máquina pueda fabricar el diseño utilizando Fusion 360 en el espacio de trabajo MANUFACTURE.</p>
-<h3 id="modelo-3d">Modelo 3D</h3>
+<p>El centro de mecanizado o CNC, son máquinas-herramientas automatizadas que se controlan por ordenador. Mediante herramientas rotativas de múltiples filos de corte y con poquísima intervención del operador, estas máquinas son capaces de llevar a cabo diferentes operaciones sobre una pieza. La precisión y la producción se ven aumentadas, a la par que disminuye el tiempo de operación y los costes.</p>
+<p>Existen dos tipos de máquinas CNC: verticales y horizontales. La diferencia radica en la posición del motor del husillo. El tamaño también dependerá según el tipo de pieza a fabricar, y puede ser de 3, 4 y 5 ejes, lo que se traduce en que a mayor número de ejes, mayor rapidez de producción de piezas más complejas.</p>
+<p>Ha sido la versatilidad de este proceso de fabricación por CNC lo que ha logrado evidenciar el salto cuantioso en desarrollo. Todas las máquinas-herramientas pueden ser adaptadas de sus procesos convencionales a un proceso de fabricación mediante comandos CNC. El taladrado, fresado y torneado son un ejemplo de ello. Además, está la fusión de diversas tareas de mecanizados en una sola máquina. De esta forma, se obtiene una rentabilidad alta, mejor distribución del espacio físico y ahorro de tiempo.</p>
+<h2 id="proceso-mecanizado-cnc">Proceso Mecanizado CNC</h2>
+<h4 id="área-de-trabajo">Área de Trabajo</h4>
+<p>Primero, crearemos una media plancha de terciario de 1220 mm x 1220 mm con un grosor de 15mm (equivalente a la mitad de una plancha de terciado estandar), que sera nuestra área de trabajo. En esta colocaremos las distintas piezas de la silla a mecanizar.</p>
+<p><img src="/img/mecanizado/2.png" alt="Area"></p>
+<h4 id="piezas-a-mecanizar">Piezas a Mecanizar</h4>
+<p>Luego, desglozamos la silla creando copias cada una de sus piezas que queremos mecanizar (MOVE/COPY) y alinearemos las caras sin calado de estas al plano X. Una vez hecho esto, organizaremos estas para que entren en nuestra area de trabajo.</p>
+<p><img src="/img/mecanizado/piezas.png" alt="Piezas"></p>
+<h4 id="set-up">Set Up</h4>
+<p>Después de haber dejado listas las piezas que queremos mecanizar en nuestra plancha, cambiaremos al modo manufactura (manufacture) para acceder a las distintas herramientas. Aquí elegiremos la maquina de corte (Generic 3-Axis), además definiremos las piezas a cortar, las orientaciones y el espacio de trabajo. Para todas las operaciones usaremos una fresa Flat End Mill de 6mm.</p>
+<p><img src="/img/mecanizado/4.png" alt="Set"></p>
+<p>Una fresa de 6mm no puede calar una placa de 15 mm de una sola pasada porque la madera no queda bien calada y la fresa se va a desagastar mucho. Para solucionar esto seleccionamos Multiple Depths de 3 mm.</p>
+<h4 id="2d-contour">2D Contour</h4>
+<p>La primera operación que haremos sera un 2D Contour para el interior de cada pieza, en la extracción de material, por medio de cortes, que permiten dejar “huecos” o espacios libres de material en las partes requeridas por la pieza que se esta trabajando. Nos acercamos a cada pieza, seleccionamos el vector inferior del calado de cada una y luegos nos vamos a editar Passes.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/interior.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/interior2.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Una vez que tengamos el contour interior, seguiremos con exterior de las piezas. Pero acá usaremos Tabs que definiran pequeñas áreas en donde la fresa no va a generar un mecanizado. De esta manera lograremos sujetar las piezas.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/exterior.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/exterior2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="2d-pocket">2D Pocket</h4>
+<p>La última operación la realizaremos con la función llamada 2D Pocket. Aquí trabajaremos con los calados de las distintas piezas. Mantendremos la misma lógica que usamos para configurar las dos operaciones anteriores.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/pocket2.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/pocket.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="trazado">Trazado</h4>
+<p>Para el trazado del asiento nuevamente haremos un sketch, esta vez definiremos una plancha de terciado con 9mm y definiremos el contorno exterior del asiento con la función 2D Contour como lo hicimos anteriormente. Esta parte de la silla tiene varios trazados en la parte inferior, estos recortes sirven para generar mayor flexibilidad del material. Para poder generar estos trazados usaremos la función Trace para definir cada linea de recorte y le pediremos a la fresa que haga cortes con 4.5mm de profunidad.</p>
+<p><img src="/img/mecanizado/5.png" alt="Asiento"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/asiento.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/asiento2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h2 id="planos">Planos</h2>
+<h2 id="proceso-mecanizado-silla-fresia">Proceso Mecanizado Silla Fresia</h2>
+<h2 id="modelo-3d">Modelo 3D</h2>
 <div>
     <iframe 
     src="https://alumnos2149.autodesk360.com/shares/public/SH56a43QTfd62c1cd968077d95a1860db562?mode=embed" 
