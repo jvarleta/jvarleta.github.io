@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Entrega 02: Mecanizado CNC - Josefina Varleta</title>
+  <title>Encargo 02: Mecanizado CNC - Josefina Varleta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://jvarleta.github.io/favicon.png">
@@ -91,31 +91,19 @@
   <ul>
     
     <li class="">
-      <a href="https://jvarleta.github.io/docs/instalar-tema/">Instalar Tema</a>
-    </li>
-    
-    <li class="">
-      <a href="https://jvarleta.github.io/docs/configuracion/">Configuración</a>
-    </li>
-    
-    <li class="">
-      <a href="https://jvarleta.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
-    </li>
-    
-    <li class="">
-      <a href="https://jvarleta.github.io/docs/markdown/">Ejemplos Markdown</a>
-    </li>
-    
-    <li class="">
       <a href="https://jvarleta.github.io/docs/objetivos/">Objetivos del Curso</a>
     </li>
     
     <li class="">
-      <a href="https://jvarleta.github.io/docs/entrega-01/">Entrega 01: Planimetría</a>
+      <a href="https://jvarleta.github.io/docs/entrega-01/">Encargo 01: Planimetría</a>
     </li>
     
     <li class="active ">
-      <a href="https://jvarleta.github.io/docs/entrega-02/">Entrega 02: Mecanizado CNC</a>
+      <a href="https://jvarleta.github.io/docs/entrega-02/">Encargo 02: Mecanizado CNC</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jvarleta.github.io/docs/entrega-03/">Encargo 03: Moldeo y Fundición</a>
     </li>
     
   </ul>
@@ -125,7 +113,7 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Entrega 02: Mecanizado CNC</h1>
+<h1 class="title">Encargo 02: Mecanizado CNC</h1>
 <div class="content ">
   <p>En el último tiempo, se ha recurrido a la construcción de nuevas herramientas y máquinas de mecanizado y de allí surge el mecanizado CNC, que es simplemente el nacimiento de un híbrido entre el componente electromecánico de las máquinas-herramientas, y el mando de un sistema operativo informático que dirige cada función. En este encargo vamos a revisar el mecanizado CNC en fusion 360 de la Silla Fresia.</p>
 <hr>
@@ -134,7 +122,20 @@
 <p>El centro de mecanizado o CNC, son máquinas-herramientas automatizadas que se controlan por ordenador. Mediante herramientas rotativas de múltiples filos de corte y con poquísima intervención del operador, estas máquinas son capaces de llevar a cabo diferentes operaciones sobre una pieza. La precisión y la producción se ven aumentadas, a la par que disminuye el tiempo de operación y los costes.</p>
 <p>Existen dos tipos de máquinas CNC: verticales y horizontales. La diferencia radica en la posición del motor del husillo. El tamaño también dependerá según el tipo de pieza a fabricar, y puede ser de 3, 4 y 5 ejes, lo que se traduce en que a mayor número de ejes, mayor rapidez de producción de piezas más complejas.</p>
 <p>Ha sido la versatilidad de este proceso de fabricación por CNC lo que ha logrado evidenciar el salto cuantioso en desarrollo. Todas las máquinas-herramientas pueden ser adaptadas de sus procesos convencionales a un proceso de fabricación mediante comandos CNC. El taladrado, fresado y torneado son un ejemplo de ello. Además, está la fusión de diversas tareas de mecanizados en una sola máquina. De esta forma, se obtiene una rentabilidad alta, mejor distribución del espacio físico y ahorro de tiempo.</p>
-<h2 id="proceso-mecanizado-cnc">Proceso Mecanizado CNC</h2>
+<h2 id="modelo-3d">Modelo 3D</h2>
+<div>
+    <iframe 
+    src="https://alumnos2149.autodesk360.com/shares/public/SH56a43QTfd62c1cd968077d95a1860db562?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+<h2 id="proceso-mecanizado-2d">Proceso Mecanizado 2D</h2>
 <h4 id="área-de-trabajo">Área de Trabajo</h4>
 <p>Primero, crearemos una media plancha de terciario de 1220 mm x 1220 mm con un grosor de 15mm (equivalente a la mitad de una plancha de terciado estandar), que sera nuestra área de trabajo. En esta colocaremos las distintas piezas de la silla a mecanizar.</p>
 <p><img src="/img/mecanizado/2.png" alt="Area"></p>
@@ -142,11 +143,13 @@
 <p>Luego, desglozamos la silla creando copias cada una de sus piezas que queremos mecanizar (MOVE/COPY) y alinearemos las caras sin calado de estas al plano X. Una vez hecho esto, organizaremos estas para que entren en nuestra area de trabajo.</p>
 <p><img src="/img/mecanizado/piezas.png" alt="Piezas"></p>
 <h4 id="set-up">Set Up</h4>
-<p>Después de haber dejado listas las piezas que queremos mecanizar en nuestra plancha, cambiaremos al modo manufactura (manufacture) para acceder a las distintas herramientas. Aquí elegiremos la maquina de corte (Generic 3-Axis), además definiremos las piezas a cortar, las orientaciones y el espacio de trabajo. Para todas las operaciones usaremos una fresa Flat End Mill de 6mm.</p>
+<p>Después de haber dejado listas las piezas que queremos mecanizar en nuestra plancha, cambiaremos al modo manufactura (manufacture) para acceder a las distintas herramientas. Aquí elegiremos la maquina de corte (Generic 3-Axis), además definiremos las piezas a cortar, las orientaciones y el espacio de trabajo.</p>
 <p><img src="/img/mecanizado/4.png" alt="Set"></p>
+<p>Para todas las operaciones usaremos una fresa Flat End Mill de 6mm.</p>
+<p><img src="/img/mecanizado/3.png" alt="Fresa"></p>
 <p>Una fresa de 6mm no puede calar una placa de 15 mm de una sola pasada porque la madera no queda bien calada y la fresa se va a desagastar mucho. Para solucionar esto seleccionamos Multiple Depths de 3 mm.</p>
 <h4 id="2d-contour">2D Contour</h4>
-<p>La primera operación que haremos sera un 2D Contour para el interior de cada pieza, en la extracción de material, por medio de cortes, que permiten dejar “huecos” o espacios libres de material en las partes requeridas por la pieza que se esta trabajando. Nos acercamos a cada pieza, seleccionamos el vector inferior del calado de cada una y luegos nos vamos a editar Passes.</p>
+<p>La primera operación que haremos sera un 2D Contour para el interior de cada pieza, en la extracción de material, por medio de cortes, que permiten dejar “huecos” o espacios libres de material en las partes requeridas por la pieza que se esta trabajando. Nos acercamos a cada pieza, seleccionamos el vector inferior del calado de cada una y luegos nos vamos a editar Passes. Cabe destacar que dichos &ldquo;huecos&rdquo; con forma de orejas se debe a que la maquina no puede hacer angulos rectos de 90° grados.</p>
 <div>
     <video 
     width="100%" 
@@ -163,7 +166,7 @@
     <source src="/img/interior2.mp4"  type="video/mp4">
     </video>
 </div>
-<p>Una vez que tengamos el contour interior, seguiremos con exterior de las piezas. Pero acá usaremos Tabs que definiran pequeñas áreas en donde la fresa no va a generar un mecanizado. De esta manera lograremos sujetar las piezas.</p>
+<p>Una vez que tengamos el contour interior, seguiremos con el mecanizado exterior de las piezas. En este realiza cortes por las partes exteriores, es decir, el contorno o silueta de cada pieza. Pero acá usaremos Tabs que definiran pequeñas áreas en donde la fresa no va a generar un mecanizado. De esta manera lograremos sujetar las piezas y evitar que se rompan durante el corte.</p>
 <div>
     <video 
     width="100%" 
@@ -219,19 +222,6 @@
 </div>
 <h2 id="planos">Planos</h2>
 <h2 id="proceso-mecanizado-silla-fresia">Proceso Mecanizado Silla Fresia</h2>
-<h2 id="modelo-3d">Modelo 3D</h2>
-<div>
-    <iframe 
-    src="https://alumnos2149.autodesk360.com/shares/public/SH56a43QTfd62c1cd968077d95a1860db562?mode=embed" 
-    width="100%" 
-    height="450" 
-    allowfullscreen="true" 
-    webkitallowfullscreen="true" 
-    mozallowfullscreen="true"  
-    frameborder="0">
-    </iframe>    
-</div>
-
 
 </div>
 </div>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Encargo 03: Moldeo y Fundición - Josefina Varleta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://jvarleta.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://jvarleta.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://jvarleta.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://jvarleta.github.io/docs/objetivos/">Objetivos del Curso</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jvarleta.github.io/docs/entrega-01/">Encargo 01: Planimetría</a>
+    </li>
+    
+    <li class="">
+      <a href="https://jvarleta.github.io/docs/entrega-02/">Encargo 02: Mecanizado CNC</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://jvarleta.github.io/docs/entrega-03/">Encargo 03: Moldeo y Fundición</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Encargo 03: Moldeo y Fundición</h1>
+<div class="content ">
+  <p>Desbastar se refiere a eliminar fragmentos grandes de alguna superficie que se quiere perfeccionar. En este caso, el respaldo de la silla tiene una superficie curva y prolija que la CNC solo lo consigue con el rebaje en 2.5D. Este último posee la capacidad de moverse por los tres ejes (X, Y, Z), pero nunca podrá moverse en por estos tres al mismo tiempo mientras se este mecanizando. Es decir, se desplaza en Z sólo cuando comienza y termina el fresado; el resto del tiempo solo se mueve en X e Y.</p>
+<hr>
+<h2 id="tipos-de-mecanizado-cnc">Tipos de Mecanizado CNC</h2>
+<p>Existen varios tipos de mecanizados según los ejes en que la máquina se desplaza. Existe 2D, 2.5D, 3D, 4D y 5D.</p>
+<p>El mecanizado 2.5D hace referencia a cuando se está cortando una pieza que tiene múltiples características planas a diferentes profundidades. Durante este proceso, el eje Z se posiciona a una profundidad donde los ejes X e Y se interpolan para cortar una entidad. El eje Z luego se retrae para que los ejes X e Y puedan moverse al punto de inicio de la siguiente entidad, que puede cortarse a una profundidad Z diferente que la última entidad.</p>
+<p>(3 imagenes)</p>
+<p>Mientras que el maquinado en 3D tiene la capacidad de controlar al menos tres ejes simultáneamente. este se logra creando curvas que usen los tres ejes simultaneamente.</p>
+<h2 id="optimización-del-tiempo">Optimización del Tiempo</h2>
+<p>El mecanizado completo de una pieza requiere llevar a cabo una sucesión de tareas y operaciones que
+abarcan la preparación de la máquina, de las herramientas de corte, y el mecanizado propiamente
+dicho, durante el cual hay lapsos de tiempo en los que hay remoción de virutas.</p>
+<p>Es importante considerar el tiempo de uso de estas maquinas, ya que influiyen directamente en los precios y en el beneficio que se puede obtener de cada pieza. Mediante una optimización del tiempo del ciclo se puede aumentar fácilmente la capacidad máxima de producción del taller, pensando en una producción más masiva.</p>
+<p>Además, el mecanizado en 2.5D es mucho más eficiente que en 3D respecto al tiempo, debido a que se reduce el desplazamiento de los distintos ejes.</p>
+<h2 id="proceso-mecanizado-25d">Proceso Mecanizado 2.5D</h2>
+<h4 id="exportar-respaldo">Exportar Respaldo</h4>
+<p>Seleccionamos el respaldo de la silla utilizada en el encargo anterior y lo exportamos como un archivo nuevo.</p>
+<p><img src="/img/moldeo/0.png" alt="Silla"></p>
+<h4 id="área-de-trabajo">Área de Trabajo</h4>
+<p>Debemos preocuparnos de que el respaldo quede ortogonal y horizontal a los planos del programa a través del comando “Move” y “Align”. Es importan que el mecanizado quede ortogonal al origen ya que haremos las distintas operaciones por ambas caras.</p>
+<p><img src="/img/moldeo/1.png" alt="Trabajo"></p>
+<p>Además, crearemos un sketch que sea un poco más grande que el respaldo de madera y luego extruiremos este de modo que el bloque sobrepase todos los ejes de las piezas. Para poder ver la figura que quedo en el interior, le bajaremos la opacidad a esta extrución.</p>
+<p><img src="/img/moldeo/2.png" alt="Sketch"></p>
+<h4 id="limite-de-trabajo">Limite de Trabajo</h4>
+<p>Aplicamos nuevamente el comando sketch, especificamente la función de proyectar. Haremos que el la vista de planta de mi respaldo se proyecte en la figura que extruimos anteriormente. Generamos este sketch para que el mecanizado que delimitado, es decir  será el espacio de mecanizado exacto por el que pasará la fresa.</p>
+<p><img src="/img/moldeo/3.png" alt="Limite"></p>
+<h4 id="set-up">Set Up</h4>
+<p>Una vez bien definida el área de trabajo, cambiaremos al modo manufactura. Al igual que en el ejercicio anterior, usaremos las maquina de corte Generic 3-Axis. Aquí definiremos las piezas a cortar, las orientaciones y el espacio de trabajo.</p>
+<p><img src="/img/moldeo/9.png" alt="Corte"></p>
+<p>Y tambien usaremos la fresa Flat End Mill de 6mm.</p>
+<p><img src="/img/moldeo/10.png" alt="Flat"></p>
+<h4 id="adaptative-clearing">Adaptative Clearing</h4>
+<p>Este proceso también es conocido como “Desvaste” o “Limpieza Adaptativa”, ya que remueve el material del bloque, acelerando y optimizando el proceso de la obtención de la superficie del respaldo. En este paso se remueve el material en el eje Z para optimizar la obtención de las superficie. Esta se demora un poco en cargar, ya que hay que esperar a que termine de generar todas las trayectorias.</p>
+<p><img src="/img/moldeo/4.png" alt="Proceso"></p>
+<p>Las líneas azules que vemos son todas las trayectorías por dónde pasará la fresa y removerá toda esa madera de manera bruta, sin una terminación prolija. Para entrar al material la fresa entra haciendo una elipse para disminuar el estré que tiene esta. Esto se aplica más cuando el material que estamos utilizando es metal pero es bueno que lo haga igual en la madera.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="parallel">Parallel</h4>
+<p>Esta función sirve para darle una terminación paralela y continua al calado. Aquí la fresa recorre la superficie para darle una terminación mucha más continua a la pieza. Las fresas de punta redonda (Ball Endmill) deja una mejor terminación La punta redonda permite que la terminación sea mucho más prolija que con una punta plana. También debemos hacer las trayectorias azules que vemos a lo largo del respaldo en el eje Y para obtener una correcta terminación.</p>
+<p><img src="/img/moldeo/5.png" alt="Parallel"></p>
+<p>Para terminar, haremos el Parallel en el otro sentido. Duplicamos la configuración anterior de parallel pero creamos una trayectoria perpendicular (90°) a esta.</p>
+<p><img src="/img/moldeo/6.png" alt="Sentido"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/respaldo4.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="areas-rojas">Areas Rojas</h4>
+<p>Al hacer la simulación de las tres operaciones, se pueden ver unas áreas de manchas rojas. Estas representan las colisiones de la fresa contra el bloque de material qu estamos usando.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/respaldo5.mp4"  type="video/mp4">
+    </video>
+</div>
+<h5 id="arreglo-fresa">Arreglo Fresa</h5>
+<p>Para poder solucionar esto es necesario utilizar fresas más largas, pasaremos de 22.5 mm a 45 mm.</p>
+<p><img src="/img/moldeo/7.png" alt="Rojo"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/respaldo6.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="lado-contrario">Lado Contrario</h4>
+<p>El lado contrario del respaldo se genera con los mismos pasos seguidos anteriormente pero desde la vista contraria.</p>
+<p><img src="/img/moldeo/11.png" alt="Laod"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/respaldo7.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="costados">Costados</h4>
+<p>Por último, quedan los costados del respaldo. Esta parte no la hace la CNC, hay que lijarla a mano.
+(Imagenes)</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
