@@ -48,12 +48,21 @@
     </item>
     
     <item>
-      <title>Entrega examen: Proceso </title>
+      <title>Examen 01: Proceso </title>
       <link>https://jvarleta.github.io/docs/examen-01/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://jvarleta.github.io/docs/examen-01/</guid>
       <description>Proceso ideación y armado de macetero biodegradable.</description>
+    </item>
+    
+    <item>
+      <title>Examen 02: Producto</title>
+      <link>https://jvarleta.github.io/docs/examen-02/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://jvarleta.github.io/docs/examen-02/</guid>
+      <description>Venta del macetero biodegradable.</description>
     </item>
     
   </channel>
